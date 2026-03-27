@@ -8,6 +8,8 @@ Template de presentation [Slidev](https://sli.dev) avec layouts personnalises et
 curl -fsSL https://raw.githubusercontent.com/sebc-dev/slidev-template/main/create-slidev.sh | bash
 ```
 
+Installe les dependances npm et le [skill Slidev](https://github.com/slidevjs/slidev) pour Claude Code (derniere version).
+
 ## Layouts
 
 | Layout | Usage | Description |
@@ -58,4 +60,17 @@ Editer `styles/index.css` :
 pnpm dev      # serveur de dev → http://localhost:3030
 pnpm build    # build statique
 pnpm export   # export PDF (necessite playwright-chromium)
+```
+
+## Structure
+
+```
+mon-projet/
+  slides.md             # contenu de la presentation
+  styles/index.css      # variables CSS du theme
+  layouts/
+    cover-title.vue     # slide titre
+    chapter.vue         # slide chapitre
+    content.vue         # slide contenu
+  public/               # images et assets
 ```
