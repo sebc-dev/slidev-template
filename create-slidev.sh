@@ -9,7 +9,7 @@ echo "  Slidev Template Installer"
 echo "  ========================="
 echo ""
 
-read -rp "Nom du projet: " PROJECT_NAME
+read -rp "Nom du projet: " PROJECT_NAME < /dev/tty
 if [ -z "$PROJECT_NAME" ]; then
   echo "Erreur: nom du projet requis."
   exit 1
