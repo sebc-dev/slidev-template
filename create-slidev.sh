@@ -32,7 +32,7 @@ cd "$PROJECT_NAME"
 
 # Nettoyage des fichiers du repo template
 rm -f create-slidev.sh
-rm -rf .agents .git
+rm -rf .git
 
 echo "=> Installation des dependances..."
 if command -v pnpm &> /dev/null; then
@@ -43,9 +43,6 @@ else
   echo "Erreur: ni pnpm ni npm n'est installe."
   exit 1
 fi
-
-echo "=> Installation du skill Slidev (derniere version)..."
-npx -y skills add slidevjs/slidev 2>/dev/null || echo "   Skill non installe (npx indisponible). Lancez: npx skills add slidevjs/slidev"
 
 echo ""
 echo "=> Projet '$PROJECT_NAME' pret !"

@@ -8,7 +8,20 @@ Template de presentation [Slidev](https://sli.dev) avec layouts personnalises et
 curl -fsSL https://raw.githubusercontent.com/sebc-dev/slidev-template/main/create-slidev.sh | bash
 ```
 
-Installe les dependances npm et le [skill Slidev](https://github.com/slidevjs/slidev) pour Claude Code (derniere version).
+Le script telecharge le template, installe les dependances npm et prepare le projet.
+
+### Utilisateurs Claude Code
+
+Le template inclut le [skill Slidev](https://github.com/slidevjs/slidev) et une commande `/init` pour finaliser le setup :
+
+```bash
+cd mon-projet
+claude
+# puis dans Claude Code :
+/init
+```
+
+La commande `/init` installe les dependances et le skill Slidev.
 
 ## Layouts
 
@@ -73,4 +86,6 @@ mon-projet/
     chapter.vue         # slide chapitre
     content.vue         # slide contenu
   public/               # images et assets
+  .claude/commands/     # commande /init pour Claude Code
+  .agents/skills/       # skill Slidev pour Claude Code
 ```
